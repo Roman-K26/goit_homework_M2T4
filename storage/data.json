@@ -1,4 +1,15 @@
 {
-    "username": "Test_uzer",
-    "message": "TEST"
+    "username": "TEST 2",
+    "message": "Tam pam",
+    "timestamp": "2023-10-26 19:41:12.016885"
+}
+{
+    "username": "TEST 1",
+    "message": "Tru la la",
+    "timestamp": "2023-10-26 19:44:28.263921"
+}
+{
+    "username": "TEST 3",
+    "message": "ABra Cadabra",
+    "timestamp": "2023-10-26 19:44:58.142918"
 }
