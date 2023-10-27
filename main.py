@@ -66,15 +66,27 @@ class GoitFramework(BaseHTTPRequestHandler):
 def save_data_from_form(data):
     parse_data = urllib.parse.unquote_plus(data.decode())
     try:
+        # Завантаження існуючих даних (якщо вони є)
+        try:
+            with open('storage/data.json', 'r', encoding='utf-8') as file:
+                existing_data = json.load(file)
+        except FileNotFoundError:
+            existing_data = {}
+
+        # Додавання нових даних та оновлення часу
         parse_dict = {key: value for key, value in [el.split('=') for el in parse_data.split('&')]}
         parse_dict["timestamp"] = str(datetime.now())
-        with open('storage/data.json', 'a', encoding='utf-8') as file:
-            json.dump(parse_dict, file, ensure_ascii=False, indent=4)
-            file.write("\n")
+        existing_data[parse_dict["timestamp"]] = parse_dict
+
+        # Запис усіх даних назад у файл
+        with open('storage/data.json', 'w', encoding='utf-8') as file:
+            json.dump(existing_data, file, ensure_ascii=False, indent=4)
+
     except ValueError as err:
         logging.error(err)
     except OSError as err:
         logging.error(err)
+
 
 def run_socket_server(host, port):
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)

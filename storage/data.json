@@ -1,15 +1,22 @@
 {
-    "username": "TEST 2",
-    "message": "Tam pam",
-    "timestamp": "2023-10-26 19:41:12.016885"
-}
-{
-    "username": "TEST 1",
-    "message": "Tru la la",
-    "timestamp": "2023-10-26 19:44:28.263921"
-}
-{
-    "username": "TEST 3",
-    "message": "ABra Cadabra",
-    "timestamp": "2023-10-26 19:44:58.142918"
+    "2023-10-27 14:38:27.362605": {
+        "username": "Gui",
+        "message": "Yuliy Tsezar",
+        "timestamp": "2023-10-27 14:38:27.362605"
+    },
+    "2023-10-27 14:39:26.595898": {
+        "username": "Luka",
+        "message": "Avreliy",
+        "timestamp": "2023-10-27 14:39:26.595898"
+    },
+    "2023-10-27 14:45:20.752999": {
+        "username": "Kleo",
+        "message": "Patra",
+        "timestamp": "2023-10-27 14:45:20.752999"
+    },
+    "2023-10-27 14:49:49.252542": {
+        "username": "Gai",
+        "message": "Octaviy",
+        "timestamp": "2023-10-27 14:49:49.252542"
+    }
 }
